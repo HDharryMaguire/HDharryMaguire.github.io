@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>作业</title>
+
+    <style>
+
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.19/esri/themes/light/main.css">
+	<link rel="stylesheet" href="css/glcss.css">
+    <script src="https://js.arcgis.com/4.19/"></script>
+    <script src="js/link.js"></script>	
+
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+	<div id="header" style="background-color:null;">
+	<h1 style="margin-bottom:0;">日本各地区气象查询专题图</h1></div>
+	<div id="header2" style="background-color:null;">
+	<h1 style="margin-bottom:0;">通过时间条查询1890-2020年飓风的信息</h1></div>
+    <div id="viewDiv2"></div>
+	<div id="overviewDiv"><div id="extentDiv"></div>
+    </div>
+    <div id="viewDiv"></div>
+	<div id="timeSlider"></div>
+
+
+	<span id="coor_scale">
+	    <div id="coordinateDisplay"></div>
+	    <div id="scaleDisplay"></div>
+	</span>
+
+	</div>
+<!--    加入图层-->
+    <div id="LayerBox">
+		<div class="dropdown">
+		<button class="dropbtn">添加图层</button>
+		<div class="dropdown-content">
+			<div class="SingleBox">
+				<p>行政区</p>
+				<input type="button" id="Add_layer1" class="button_Add" value="加入">
+				<input type="button" id="Remove_layer1" class="button_Remove" value="删除">
+				<br/>
+				<img src="img/pop.png"
+					height="50px" width="110px">
+			</div>
+			<div class="SingleBox">
+				<p>风向和风速</p>
+				<input type="button" id="Add_layer2" class="button_Add" value="加入">
+				<input type="button" id="Remove_layer2" class="button_Remove" value="删除">
+				<br/>
+				<img src="img/wind.png"
+					 height="50px" width="110px">
+			</div>
+			<div class="SingleBox">
+				<p>气温</p>
+				<input type="button" id="Add_layer3" class="button_Add" value="加入">
+				<input type="button" id="Remove_layer3" class="button_Remove" value="删除">
+				<br/>
+				<img src="img/temp.png" 
+					height="50px" width="110px">
+			</div>
+			<div class="SingleBox">
+				<p>降水量</p>
+				<input type="button" id="Add_layer4" class="button_Add" value="加入">
+				<input type="button" id="Remove_layer4" class="button_Remove" value="删除">
+				<br/>
+				<img src="img/rainfall.png"
+					height="50px" width="110px">
+			</div>
+			<div class="SingleBox">
+				<p>飓风</p>
+				<input type="button" id="Add_layer5" class="button_Add" value="加入">
+				<input type="button" id="Remove_layer5" class="button_Remove" value="删除">
+				<br/>
+				<img src="img/jufeng.png"
+					height="50px" width="110px">
+			</div>
+			
+		</div>
+        </div>
+
+		<div id="Layers">
+    </div>
+
+	
+	</div>
+<!--切换底图-->
+    <div id="BaseMap_div">
+		<div class="dropdown2">
+			<button class="dropbtn2">更换底图</button>	
+			<div class="dropdown2-content">
+				<input type="radio" id="streets" name="basemap" checked><img src="img/streets.jpg" alt="streets"
+																		  height="100px" width="110px" title="streets">
+				<br />
+				<input type="radio" id="osm" name="basemap"><img src="img/osm.jpg" alt="osm"
+																	height="100px" width="110px" title="osm">
+				<br />
+				<input type="radio" id="oceans" name="basemap"><img src="img/oceans.jpg" alt="oceans"
+																	 height="100px" width="110px" title="oceans">
+				<br />
+				<input type="radio" id="hybrid" name="basemap"><img src="img/hybrid.jpg" alt="hybrid"
+																 height="100px" width="110px" title="hybrid">
+				<br />
+			</div>
+		
+		</div>
+
+<!--    经纬度坐标 比例尺-->
+
+	</div>
+	<div id="titleDiv" class="esri-widget">
+	</div>	
+
+</body>
+
+</html>
